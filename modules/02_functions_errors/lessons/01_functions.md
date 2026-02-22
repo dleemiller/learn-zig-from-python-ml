@@ -107,6 +107,23 @@ pub fn main() void {
 
 The compiler generates specialized versions for each type used.
 
+## Integer Division and Remainder
+
+Python's `//` and `%` operators "just work" for integer division and modulus. In Zig, the standard `/` and `%` operators don't work on all integer types the way you might expect — Zig provides built-in functions instead:
+
+```zig
+const a: i32 = 17;
+const b: i32 = 5;
+
+const quotient = @divTrunc(a, b);  // 3 (truncates toward zero, like Python's int(17/5))
+const remainder = @rem(a, b);      // 2 (remainder after truncated division)
+```
+
+- `@divTrunc(a, b)` — divides and truncates toward zero. This is what Python's `int(a/b)` does.
+- `@rem(a, b)` — the remainder after `@divTrunc`. The sign follows the numerator.
+
+Zig has these as built-ins because it offers multiple division behaviors (truncated, floored, exact) and makes you choose explicitly. For most cases, `@divTrunc` and `@rem` are what you want.
+
 ## Multiple Return Values
 
 Zig doesn't have tuples, but you can return a struct:

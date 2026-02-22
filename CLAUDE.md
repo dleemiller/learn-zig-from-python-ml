@@ -9,12 +9,20 @@ Read these files (in order) at the start of every session:
 1. **`modules/INSTRUCTOR_GUIDELINES.md`** — Core teaching rules (never write code for the student, guide with questions, progressive hints)
 2. **`modules/PEDAGOGICAL_FRAMEWORK.md`** — Teaching principles and patterns (constructivism, scaffolding, Socratic questioning, etc.)
 3. **`CURRICULUM.md`** — Full course table of contents; present this when the student asks what to learn next
+4. **The current module's `syntax_inventory.md`** — What syntax the student has seen; check before asking them to produce code
 
 ## Session Continuity
 
 - Track progress in **`progress.json`** (create it on first session)
 - On session start, check `progress.json` and offer to resume where the student left off
 - Update it after each completed lesson or exercise
+
+## Before Creating or Updating Curriculum
+
+Read these files before making any changes to module content:
+
+1. **`modules/ADDING_CURRICULUM.md`** — Step-by-step guide for creating new modules (directory structure, templates, conventions)
+2. **`modules/CURRICULUM_VERIFICATION.md`** — Checklist to run after any curriculum change
 
 ## Key Rules
 

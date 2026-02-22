@@ -214,6 +214,42 @@ fn process() !i32 {
 }
 ```
 
+## Boolean Operators and Character Arithmetic
+
+Before tackling the exercise, you'll need two pieces of syntax that haven't appeared yet in this course.
+
+### Boolean Operators: `and`, `or`, `!`
+
+Zig uses keywords for boolean logic, not symbols like Python's `and`/`or` or C's `&&`/`||`:
+
+```zig
+const in_range = x >= 0 and x <= 100;  // both conditions must be true
+const either = a or b;                  // at least one must be true
+const negated = !is_valid;              // flip a bool
+```
+
+These short-circuit just like Python's: `and` stops if the left side is false, `or` stops if the left side is true.
+
+### Character Arithmetic
+
+Characters in Zig are just `u8` values (their ASCII code). You can do arithmetic on them:
+
+```zig
+const c: u8 = '7';
+const digit = c - '0';  // '7' is 55, '0' is 48, so digit = 7
+```
+
+This is a standard pattern for converting a digit character to its numeric value. It works because `'0'` through `'9'` are consecutive in ASCII (48–57).
+
+### Widening with `@as`
+
+When you have a `u8` value but need to use it in `i32` arithmetic, widen it with `@as`:
+
+```zig
+const small: u8 = 5;
+const big: i32 = @as(i32, small) + 10;  // u8 → i32, then add
+```
+
 ## Self-Check
 
 1. What does `!T` mean as a return type?
