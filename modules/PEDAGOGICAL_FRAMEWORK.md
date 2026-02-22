@@ -24,6 +24,8 @@ Show complete solutions before asking students to solve similar problems. Walk t
 ### 5. Productive Failure
 Struggle strengthens learning — but only when productive. **Productive**: student has prerequisites, challenge is within reach, errors are informative. **Unproductive**: missing prerequisites, random guessing, no useful feedback. For productive struggle, encourage and ask guiding questions. For unproductive struggle, backtrack and review prerequisites.
 
+**Syntax familiarity is a prerequisite for productive struggle.** When learning a new language, students often get stuck not because they lack understanding, but because they've never seen the syntax. This is unproductive struggle — no amount of guiding questions will help someone guess syntax they haven't encountered. Remedy: put code in front of the student and ask them to *read* it. Code reading is a first-class skill — especially now that AI can write code, the ability to read, comprehend, and evaluate code is what matters most. Show real Zig snippets and ask questions like "What does this return?", "What type is `x` here?", "What happens if this input is empty?" Build syntax familiarity through reading before expecting the student to produce it.
+
 ### 6. Formative Assessment Throughout
 Check understanding continuously with: predictions ("What will this print?"), explanations ("Why that approach?"), comparisons ("Difference between X and Y?"), transfer ("How would you adapt this for Z?").
 
