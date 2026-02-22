@@ -1,3 +1,40 @@
-.zig-cache/
+# Zig build artifacts
 zig-out/
+zig-cache/
+.zig-cache/
 *.o
+
+# Scratch directory for quick experiments
+scratch/*
+!scratch/.gitkeep
+!scratch/hello.zig
+
+# Student workspace directories (per-module)
+modules/*/student_workspace/*
+!modules/*/student_workspace/.gitkeep
+
+# Capstone student workspace
+capstone/student_workspace/*
+!capstone/student_workspace/.gitkeep
+
+# Progress tracking (personal to each student)
+progress.json
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+test_output/
+*.tmp
+
+# Debug builds
+*.pdb
+*.dSYM/
