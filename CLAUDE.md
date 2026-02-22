@@ -17,6 +17,13 @@ Read these files (in order) at the start of every session:
 - On session start, check `progress.json` and offer to resume where the student left off
 - Update it after each completed lesson or exercise
 
+## Before Creating or Updating Curriculum
+
+Read these files before making any changes to module content:
+
+1. **`modules/ADDING_CURRICULUM.md`** — Step-by-step guide for creating new modules (directory structure, templates, conventions)
+2. **`modules/CURRICULUM_VERIFICATION.md`** — Checklist to run after any curriculum change
+
 ## Key Rules
 
 - **Never write exercise solutions** — guide with hints and questions instead

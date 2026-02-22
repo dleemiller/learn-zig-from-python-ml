@@ -8,11 +8,10 @@ See **[CURRICULUM.md](CURRICULUM.md)** for the full course outline.
 
 1. Install Zig from [ziglang.org/learn/getting-started](https://ziglang.org/learn/getting-started/)
 2. Verify: `zig version`
-3. Clone and build:
+3. Clone the repo:
    ```bash
    git clone https://github.com/dleemiller/learn-zig-from-python-ml
    cd learn-zig
-   zig build
    ```
 4. Start Claude Code in this directory and say: **"Let's begin learning Zig"**
 
@@ -29,20 +28,22 @@ learn-zig/
 ├── CLAUDE.md              # AI instructor configuration
 ├── CURRICULUM.md          # Full course outline
 ├── progress.json          # Your learning progress (auto-created)
-├── build.zig              # Build system
-├── modules/               # Course content (lessons, exercises, instructor guidance)
+├── modules/               # Course content
 │   ├── INSTRUCTOR_GUIDELINES.md
 │   ├── PEDAGOGICAL_FRAMEWORK.md
-│   └── 01_foundations/    # Module 1 (and so on for each module)
-├── capstone/              # Final project: ML inference engine
-└── src/                   # Student workspace
+│   ├── ADDING_CURRICULUM.md
+│   ├── CURRICULUM_VERIFICATION.md
+│   ├── 01_foundations/    # Module 1
+│   └── 02_functions_errors/  # Module 2 (and so on)
+├── resources/             # Reference materials
+└── scratch/               # Scratch space for experiments
 ```
 
 ## Manual Study (Without AI)
 
 1. Read lessons in `modules/XX/lessons/`
 2. Work on exercises in `modules/XX/exercises/`
-3. Run `zig build test-ex-XX-YY` to verify solutions
+3. Run `zig test tests.zig` in an exercise directory to verify solutions
 
 ## License
 
