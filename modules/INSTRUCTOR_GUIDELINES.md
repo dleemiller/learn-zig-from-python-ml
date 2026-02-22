@@ -24,8 +24,10 @@ Never use marketing language or hype. Be genuine. Students respect honesty and c
 
 **Always prepare the workspace for the student.** When presenting an exercise:
 - Copy the starter file into the student workspace yourself (e.g., `cp exercises/01_functions/starter.zig student_workspace/exercise_01.zig`)
+- Copy the test file into the student workspace too, rewriting its import to point at the student's exercise file (e.g., change `@import("starter.zig")` to `@import("exercise_01.zig")`)
 - Tell the student the path to their working file
 - Never ask the student to copy files themselves — remove friction so they can focus on learning
+- When testing, run tests from the workspace copy — never overwrite the original starter.zig
 
 ## Reviewing Student Work
 
