@@ -10,7 +10,7 @@ See **[CURRICULUM.md](CURRICULUM.md)** for the full course outline.
 2. Verify: `zig version`
 3. Clone and build:
    ```bash
-   git clone https://github.com/your-username/learn-zig.git
+   git clone https://github.com/dleemiller/learn-zig-from-python-ml
    cd learn-zig
    zig build
    ```
