@@ -13,44 +13,30 @@
 - [x] 8 lessons with full content
 - [x] 8 instructor guidance files with pedagogical framework
 - [x] 8 exercises with prompts, starters, solutions, and tests
+- [x] Syntax inventory
+- [x] Student workspace directory
+
+### Module 2: Functions, Errors, and Optionals (COMPLETE)
+- [x] Module README
+- [x] 6 lessons with full content
+- [x] 6 instructor guidance files with pedagogical framework
+- [x] 6 exercises with prompts, starters, solutions, and tests
+- [x] Syntax inventory
 - [x] Student workspace directory
 
 ### Infrastructure (COMPLETE)
 - [x] Repository README
 - [x] CURRICULUM.md (course overview)
-- [x] build.zig (with exercise test targets)
-- [x] build.zig.zon
 - [x] .gitignore
 - [x] INSTRUCTOR_GUIDELINES.md (prime directive: never write code for students)
 - [x] PEDAGOGICAL_FRAMEWORK.md (evidence-based teaching strategies)
+- [x] ADDING_CURRICULUM.md (guide for creating new modules)
+- [x] CURRICULUM_VERIFICATION.md (checklist for verifying curriculum changes)
 - [x] resources/python_to_zig_cheatsheet.md
 
 ---
 
 ## Remaining Work
-
-### Module 2: Functions, Errors, and Optionals (6 lessons)
-
-#### Lessons to Create
-- [ ] `lessons/01_functions.md` - Function basics, parameters, return types, anytype
-- [ ] `lessons/02_errors.md` - Error unions (!T), error sets, try/catch
-- [ ] `lessons/03_defer.md` - defer/errdefer patterns, cleanup
-- [ ] `lessons/04_optionals.md` - Optional types (?T), orelse, unwrapping
-- [ ] `lessons/05_unions.md` - Tagged unions, switch, exhaustiveness
-- [ ] `lessons/06_comptime.md` - Comptime basics, type-level programming intro
-
-#### Instructor Guidance
-- [ ] `instructor/01_guidance.md` through `instructor/06_guidance.md`
-
-#### Exercises
-- [ ] `exercises/01_functions/` - Function declaration and calling
-- [ ] `exercises/02_errors/` - Error propagation and handling
-- [ ] `exercises/03_defer/` - Resource cleanup patterns
-- [ ] `exercises/04_optionals/` - Working with optional values
-- [ ] `exercises/05_unions/` - Tagged union matching
-- [ ] `exercises/06_comptime/` - Basic comptime operations
-
----
 
 ### Module 3: Memory Management (8 lessons) - CRITICAL MODULE
 
@@ -336,10 +322,10 @@
 
 | Component | Total Items | Completed | Remaining |
 |-----------|-------------|-----------|-----------|
-| Modules | 11 | 1 | 10 |
-| Lessons | 65 | 8 | 57 |
-| Exercises | ~65 | 8 | ~57 |
-| Instructor Guides | ~65 | 8 | ~57 |
+| Modules | 11 | 2 | 9 |
+| Lessons | 65 | 14 | 51 |
+| Exercises | ~65 | 14 | ~51 |
+| Instructor Guides | ~65 | 14 | ~51 |
 | Capstone Milestones | 6 | 0 | 6 |
 | Tools | 2 | 0 | 2 |
 | Resources | 4 | 1 | 3 |
@@ -349,17 +335,16 @@
 ## Priority Order
 
 1. **Module 3 (Memory Management)** - Most critical for Python developers
-2. **Module 2 (Functions/Errors)** - Builds on Module 1
-3. **Module 4 (Data Structures)** - Enables tensor work
-4. **Tools (verify.zig, check_progress.zig)** - Enable progress tracking
-5. **Module 5 (Build System)** - Project organization
-6. **Module 6 (Standard Library)** - Practical capabilities
-7. **Module 7 (C Interop)** - BLAS enablement
-8. **Module 8 (SIMD)** - Performance optimization
-9. **Module 9 (Data Processing)** - Algorithm implementations
-10. **Module 10 (Best Practices)** - Production readiness
-11. **Module 11 (Advanced ML)** - Capstone preparation
-12. **Capstone Project** - Final integration
+2. **Module 4 (Data Structures)** - Enables tensor work
+3. **Tools (verify.zig, check_progress.zig)** - Enable progress tracking
+4. **Module 5 (Build System)** - Project organization
+5. **Module 6 (Standard Library)** - Practical capabilities
+6. **Module 7 (C Interop)** - BLAS enablement
+7. **Module 8 (SIMD)** - Performance optimization
+8. **Module 9 (Data Processing)** - Algorithm implementations
+9. **Module 10 (Best Practices)** - Production readiness
+10. **Module 11 (Advanced ML)** - Capstone preparation
+11. **Capstone Project** - Final integration
 
 ---
 
