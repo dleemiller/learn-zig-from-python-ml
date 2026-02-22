@@ -21,6 +21,14 @@ Average: 3.0
 17 / 5 = 3 remainder 2
 ```
 
+## Syntax Reference
+
+These built-ins are needed for this exercise. If any are unfamiliar, review the referenced lesson before starting.
+
+- `@floatFromInt(value)` — convert an integer (like `values.len`) to a float for division (Module 1, Lesson 1.5)
+- `@divTrunc(a, b)` — truncated integer division, like Python's `int(a/b)` (Lesson 2.1)
+- `@rem(a, b)` — remainder after truncated division (Lesson 2.1)
+
 ## Concepts Tested
 
 - Function declaration syntax

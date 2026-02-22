@@ -5,6 +5,7 @@
 1. Read `modules/INSTRUCTOR_GUIDELINES.md` for the prime directive
 2. Read `modules/PEDAGOGICAL_FRAMEWORK.md` for teaching strategies
 3. Read `lessons/01_functions.md` for lesson content
+4. Read `syntax_inventory.md` to check what syntax the student has seen
 
 ## CRITICAL: Learning Through Struggle
 

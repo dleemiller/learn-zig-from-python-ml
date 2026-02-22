@@ -21,6 +21,10 @@ Partial init: Cleanup called
 LIFO order: 3, 2, 1
 ```
 
+## Note on Pointers
+
+The `Counter` struct in the starter code uses pointers (`*bool`, `*Counter`). Pointers are a Module 3 topic — the pointer code is pre-written for you. **You do not need to modify the Counter struct or understand pointer syntax to complete this exercise.** Focus only on adding `defer` and `errdefer` lines.
+
 ## Concepts Tested
 
 - defer for guaranteed cleanup

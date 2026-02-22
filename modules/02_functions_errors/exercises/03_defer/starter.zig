@@ -1,6 +1,8 @@
 const std = @import("std");
 
-// A simple counter that tracks cleanup
+// A simple counter that tracks cleanup.
+// NOTE: This struct uses pointers (*bool, *Counter) — a Module 3 topic.
+// The pointer code is pre-written. Don't modify this struct; just use it below.
 pub const Counter = struct {
     value: i32,
     cleanup_called: *bool,
