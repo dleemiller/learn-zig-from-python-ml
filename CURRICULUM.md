@@ -1,18 +1,6 @@
 # Zig Learning Curriculum
 
-A comprehensive curriculum for Python/ML developers learning Zig, progressing from basics to building an ML inference engine.
-
-## How This Curriculum Works
-
-This is an **AI-assisted interactive course**. The AI instructor:
-1. Reads lesson content from `modules/XX/lessons/`
-2. Follows teaching guidance from `modules/XX/instructor/`
-3. Presents exercises from `modules/XX/exercises/`
-4. Verifies your work using the build system
-
-**To start learning**, tell your AI assistant: "I want to start learning Zig"
-
----
+A curriculum for Python/ML developers learning Zig, from basics to building an ML inference engine.
 
 ## Module Overview
 
@@ -37,8 +25,6 @@ This is an **AI-assisted interactive course**. The AI instructor:
 
 ## Module 1: Foundations for Python Developers
 
-**Goal**: Get comfortable with Zig syntax and understand how it differs from Python.
-
 | Lesson | Topic | Key Concepts |
 |--------|-------|--------------|
 | 1.1 | Why Zig for ML? | Compile-time guarantees, performance, no hidden control flow |
@@ -50,13 +36,9 @@ This is an **AI-assisted interactive course**. The AI instructor:
 | 1.7 | Arrays vs Slices | Stack allocation, bounds checking, sentinels |
 | 1.8 | Control Flow | Expression-based if/switch, labeled blocks |
 
-**Exercises**: Hello world, type conversion, string manipulation, FizzBuzz
-
 ---
 
 ## Module 2: Functions, Errors, and Optionals
-
-**Goal**: Master Zig's approach to error handling - explicit, composable, and safe.
 
 | Lesson | Topic | Key Concepts |
 |--------|-------|--------------|
@@ -67,13 +49,9 @@ This is an **AI-assisted interactive course**. The AI instructor:
 | 2.5 | Unions and Enums | Tagged unions, `switch`, exhaustiveness |
 | 2.6 | Comptime Basics | Type-level programming introduction |
 
-**Exercises**: Error propagation, file parsing with cleanup, option handling
-
 ---
 
 ## Module 3: Memory Management (CRITICAL)
-
-**Goal**: This is the most important module for Python developers. Understand memory ownership and allocation patterns used in ML systems.
 
 | Lesson | Topic | Key Concepts |
 |--------|-------|--------------|
@@ -86,13 +64,9 @@ This is an **AI-assisted interactive course**. The AI instructor:
 | 3.7 | Memory Patterns for ML | Per-inference arenas, weight persistence |
 | 3.8 | Debugging Memory Issues | `std.testing.allocator`, valgrind integration |
 
-**Exercises**: Implement data structures with proper cleanup, arena-scoped inference
-
 ---
 
 ## Module 4: Data Structures and Generics
-
-**Goal**: Build reusable, generic data structures including a tensor type for ML work.
 
 | Lesson | Topic | Key Concepts |
 |--------|-------|--------------|
@@ -103,13 +77,9 @@ This is an **AI-assisted interactive course**. The AI instructor:
 | 4.5 | Building a Tensor Type | Shape, dtype, data pointer, views |
 | 4.6 | Iterators | Custom iteration, for loop integration |
 
-**Exercises**: Generic stack, tensor operations, custom iterators
-
 ---
 
 ## Module 5: Build System and Project Organization
-
-**Goal**: Understand Zig's build system for real projects with dependencies.
 
 | Lesson | Topic | Key Concepts |
 |--------|-------|--------------|
@@ -119,13 +89,9 @@ This is an **AI-assisted interactive course**. The AI instructor:
 | 5.4 | Cross-compilation | Target triples, release builds |
 | 5.5 | Testing Infrastructure | Test blocks, `zig test`, test runners |
 
-**Exercises**: Multi-module project setup, cross-compile for different targets
-
 ---
 
 ## Module 6: Standard Library Essentials
-
-**Goal**: Master the "batteries included" parts of Zig for real data work.
 
 | Lesson | Topic | Key Concepts |
 |--------|-------|--------------|
@@ -138,13 +104,9 @@ This is an **AI-assisted interactive course**. The AI instructor:
 | 6.7 | TCP/UDP Sockets | `std.net`, client/server patterns |
 | 6.8 | Building a Simple Server | Request handling, concurrency |
 
-**Exercises**: Config file parser, gzip decompression, REST client
-
 ---
 
 ## Module 7: C Interoperability
-
-**Goal**: Leverage the vast C ecosystem for ML work (BLAS, image processing, etc.).
 
 | Lesson | Topic | Key Concepts |
 |--------|-------|--------------|
@@ -154,13 +116,9 @@ This is an **AI-assisted interactive course**. The AI instructor:
 | 7.4 | BLAS Integration | CBLAS interface, sgemm/sgemv |
 | 7.5 | Wrapping C Libraries | Safe Zig wrappers over unsafe C |
 
-**Exercises**: Call libc functions, wrap a C library, BLAS matrix multiply
-
 ---
 
 ## Module 8: Hardware Intrinsics and SIMD
-
-**Goal**: Write high-performance kernels that leverage modern CPU features.
 
 | Lesson | Topic | Key Concepts |
 |--------|-------|--------------|
@@ -171,13 +129,9 @@ This is an **AI-assisted interactive course**. The AI instructor:
 | 8.5 | ARM NEON | 128-bit vectors, Apple Silicon |
 | 8.6 | Writing Portable SIMD | Cross-architecture abstractions |
 
-**Exercises**: Vectorized dot product, element-wise operations, benchmarking
-
 ---
 
 ## Module 9: Data Processing and Algorithms
-
-**Goal**: Implement practical algorithms used in ML/data science pipelines.
 
 | Lesson | Topic | Key Concepts |
 |--------|-------|--------------|
@@ -191,13 +145,9 @@ This is an **AI-assisted interactive course**. The AI instructor:
 | 9.8 | Image Processing Basics | Grayscale, resize, convolution |
 | 9.9 | Image Pipeline | Load, process, save workflow |
 
-**Exercises**: Implement each algorithm, benchmark against Python/NumPy
-
 ---
 
 ## Module 10: Best Practices and Production Code
-
-**Goal**: Write maintainable, professional Zig code.
 
 | Lesson | Topic | Key Concepts |
 |--------|-------|--------------|
@@ -206,13 +156,9 @@ This is an **AI-assisted interactive course**. The AI instructor:
 | 10.3 | Error Messages | Descriptive error set design |
 | 10.4 | Performance Profiling | `-ftime-report`, perf integration |
 
-**Exercises**: Refactor code for style, add documentation, profile hotspots
-
 ---
 
 ## Module 11: Advanced Topics for ML
-
-**Goal**: Handle advanced scenarios for production ML systems.
 
 | Lesson | Topic | Key Concepts |
 |--------|-------|--------------|
@@ -220,13 +166,9 @@ This is an **AI-assisted interactive course**. The AI instructor:
 | 11.2 | Numerical Precision | f16/bf16/f32 conversion, stability |
 | 11.3 | Memory-Mapped I/O | Large model loading, mmap patterns |
 
-**Exercises**: Parallel matrix multiply, precision conversion, mmap model loading
-
 ---
 
 ## Capstone Project: ML Inference Engine
-
-Build a working inference engine from scratch.
 
 ### Phase 1: MLP Classifier (Primary Goal)
 
@@ -258,20 +200,13 @@ Build a working inference engine from scratch.
 
 ## Learning Path Recommendations
 
-### Fast Track (Experienced Systems Programmer)
-Modules 1, 3, 6, 8 → Capstone
-
-### Standard Path (Python Developer)
-All modules in order, ~2-3 lessons per day
-
-### Deep Dive (Thorough Understanding)
-All modules + all exercises + capstone extensions
-
----
+- **Fast Track** (experienced systems programmer): Modules 1, 3, 6, 8 → Capstone
+- **Standard Path** (Python developer): All modules in order
+- **Deep Dive** (thorough understanding): All modules + all exercises + capstone extensions
 
 ## Progress Tracking
 
-The AI instructor tracks your progress in `progress.json`:
+The AI instructor tracks progress in `progress.json`:
 
 ```json
 {
@@ -282,13 +217,4 @@ The AI instructor tracks your progress in `progress.json`:
 }
 ```
 
-Resume anytime by saying: "Continue where I left off"
-
----
-
-## Getting Help
-
-- **Stuck on an exercise?** Ask for hints (progressive difficulty)
-- **Concept unclear?** Request Python comparisons
-- **Want to skip ahead?** Ask to jump to a specific module
-- **Need a review?** Ask for a summary of previous concepts
+Resume anytime by saying: **"Continue where I left off"**
