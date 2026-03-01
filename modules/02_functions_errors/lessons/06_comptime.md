@@ -263,4 +263,4 @@ You've completed Module 2! You now understand:
 - Tagged unions for type-safe variants
 - Basic comptime for generic programming
 
-→ Continue to [Module 3: Memory Management](../../03_memory/README.md)
+→ Continue to [Module 3: Memory Management](../../03_memory_management/README.md)
