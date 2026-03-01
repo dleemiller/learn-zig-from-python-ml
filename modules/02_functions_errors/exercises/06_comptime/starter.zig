@@ -1,40 +1,37 @@
 const std = @import("std");
 
-// This is computed at compile time - no runtime cost
-pub const comptime_sum = blk: {
-    var sum: i32 = 0;
-    for (0..11) |i| {
-        sum += @as(i32, @intCast(i));
-    }
-    break :blk sum;
-};
-
-// TODO: Implement a generic max function
-// It should work with any numeric type
+// ── Part 1: Generic max ──────────────────────────────────────────────
+// TODO: Implement a generic max function.
+// It takes a comptime type parameter T and two values of that type,
+// and returns the larger value.
 pub fn max(comptime T: type, a: T, b: T) T {
     _ = a;
     _ = b;
     return 0;
 }
 
-// TODO: Create an array of comptime-known size
-pub fn createArray(comptime size: usize) [size]i32 {
-    var arr: [size]i32 = undefined;
-    for (0..size) |i| {
-        arr[i] = @intCast(i);
-    }
-    return arr;
+// ── Part 2: Pair type constructor ────────────────────────────────────
+// TODO: Make this function return a struct type whose fields use T.
+// Right now it ignores T and hardcodes u8 — fix it so the returned
+// struct actually uses the type parameter.
+pub fn Pair(comptime T: type) type {
+    _ = T;
+    return struct {
+        first: u8,
+        second: u8,
+    };
 }
 
-pub fn main() void {
-    // Comptime constant
-    std.debug.print("Comptime sum: {d}\n", .{comptime_sum});
-
-    // Generic max function
-    std.debug.print("Max i32: {d}\n", .{max(i32, 10, 42)});
-    std.debug.print("Max f64: {d}\n", .{max(f64, 3.14, 2.71)});
-
-    // Comptime array size
-    const arr = createArray(10);
-    std.debug.print("Array size: {d}\n", .{arr.len});
+// ── Part 3: Type introspection ───────────────────────────────────────
+// TODO: Return true if T is an integer or float type, false otherwise.
+// Hint: switch on @typeInfo(T) and check for .int and .float
+pub fn isNumeric(comptime T: type) bool {
+    _ = T;
+    return false;
 }
+
+// ── Part 4: Comptime factorial ───────────────────────────────────────
+// TODO: Compute 10! (= 3628800) entirely at compile time.
+// Replace the 0 with a labeled block: blk: { ... break :blk result; }
+// Use a loop inside the block to compute the factorial.
+pub const comptime_factorial: u64 = 0;

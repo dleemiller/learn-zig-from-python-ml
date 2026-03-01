@@ -1,31 +1,35 @@
 const std = @import("std");
 
-pub const comptime_sum = blk: {
-    var sum: i32 = 0;
-    for (0..11) |i| {
-        sum += @as(i32, @intCast(i));
-    }
-    break :blk sum;
-};
-
+// ── Part 1: Generic max ──────────────────────────────────────────────
+// A generic function that works with any comparable type.
 pub fn max(comptime T: type, a: T, b: T) T {
     return if (a > b) a else b;
 }
 
-pub fn createArray(comptime size: usize) [size]i32 {
-    var arr: [size]i32 = undefined;
-    for (0..size) |i| {
-        arr[i] = @intCast(i);
+// ── Part 2: Pair type constructor ────────────────────────────────────
+// A function that returns a type: a struct holding two values of type T.
+pub fn Pair(comptime T: type) type {
+    return struct {
+        first: T,
+        second: T,
+    };
+}
+
+// ── Part 3: Type introspection ───────────────────────────────────────
+// Uses @typeInfo to check whether T is a numeric type (integer or float).
+pub fn isNumeric(comptime T: type) bool {
+    return switch (@typeInfo(T)) {
+        .int, .float => true,
+        else => false,
+    };
+}
+
+// ── Part 4: Comptime factorial ───────────────────────────────────────
+// 10! computed entirely at compile time using a labeled block.
+pub const comptime_factorial = blk: {
+    var result: u64 = 1;
+    for (1..11) |i| {
+        result *= @intCast(i);
     }
-    return arr;
-}
-
-pub fn main() void {
-    std.debug.print("Comptime sum: {d}\n", .{comptime_sum});
-
-    std.debug.print("Max i32: {d}\n", .{max(i32, 10, 42)});
-    std.debug.print("Max f64: {d}\n", .{max(f64, 3.14, 2.71)});
-
-    const arr = createArray(10);
-    std.debug.print("Array size: {d}\n", .{arr.len});
-}
+    break :blk result;
+};

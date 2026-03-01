@@ -100,17 +100,48 @@ A: Writing libraries, generic data structures, type-safe builders. For applicati
 
 ## Exercise Facilitation
 
-### Exercise 2.6: Comptime
+### Exercise 2.6: Comptime (4 parts)
 
-- **Goal**: Use basic comptime concepts
+#### Part 1: `max` (warm-up)
+- **Goal**: Write a generic function with `comptime T: type`
 - **Progressive hints**:
-  1. "What value needs to be known at compile time here?"
-  2. "You're writing a generic function. What's the type parameter?"
-  3. "The compiler generates code for each type used."
+  1. "You need to compare `a` and `b` and return the larger one."
+  2. "Remember the conditional expression syntax: `if (cond) x else y`."
+  3. "What operator compares two values of the same type?"
+- **Common mistakes**: Forgetting that `return 0` only works for the placeholder
+
+#### Part 2: `Pair` (function returning a type)
+- **Goal**: Experience the "wow" moment — a function that *returns a type*
+- **Progressive hints**:
+  1. "The stub ignores `T` and uses `u8`. What should the field types be instead?"
+  2. "Look at the function signature — it returns `type`. What can you return that is a type?"
+  3. "The `return struct { ... };` pattern is key. What goes inside the struct?"
 - **Common mistakes**:
-  - Trying to use runtime values where comptime needed
-  - Overcomplicating (keep it simple)
-- **Follow-up**: "Where have you seen comptime being used earlier, even without the keyword?"
+  - Not understanding that `struct { ... }` is a type literal you can return
+  - Forgetting to remove `_ = T;` after using T in the struct fields
+
+#### Part 3: `isNumeric` (type introspection)
+- **Goal**: Use `@typeInfo` and switch on type categories
+- **Progressive hints**:
+  1. "What does `@typeInfo(T)` return? It's something you can switch on."
+  2. "Think about tagged unions from Lesson 2.5 — `@typeInfo` returns one."
+  3. "The variants you need are `.int` and `.float`. What should the `else` branch return?"
+- **Common mistakes**:
+  - Trying to compare types with `==` instead of using `@typeInfo`
+  - Forgetting the `else` branch in the switch
+
+#### Part 4: `comptime_factorial` (compile-time evaluation)
+- **Goal**: Write a comptime labeled block with a loop from scratch
+- **Progressive hints**:
+  1. "Remember `comptime_sum` from the lesson? This follows the same pattern."
+  2. "You need a labeled block: `blk: { ... break :blk result; }`"
+  3. "Start `result` at 1, then multiply by each number from 1 to 10."
+- **Common mistakes**:
+  - Starting the factorial at 0 instead of 1 (0 * anything = 0)
+  - Forgetting `break :blk result;` at the end of the block
+  - Off-by-one in the loop range
+
+- **Follow-up after all parts**: "Where have you seen comptime being used earlier, even without the keyword?"
 
 ## Evaluating Student Work
 

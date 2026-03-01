@@ -39,6 +39,23 @@ comptime {
 // sum is 45, computed at compile time
 ```
 
+### Comptime with Labeled Blocks
+
+Remember labeled blocks from Lesson 1.8? They let a block produce a value with `break :label result`. This pairs naturally with comptime — you can compute a `const` from a block that runs entirely at compile time:
+
+```zig
+const triangle_10 = blk: {
+    var total: i32 = 0;
+    for (1..11) |i| {
+        total += @as(i32, @intCast(i));
+    }
+    break :blk total;
+};
+// triangle_10 is 55 — the 10th triangle number, computed at compile time
+```
+
+The pattern is: `const name = label: { ... break :label value; };` — the block runs at compile time because everything inside is comptime-known, and `break :blk total` is how the block hands back its result.
+
 ## Comptime Parameters
 
 This is where comptime gets powerful - type parameters:
