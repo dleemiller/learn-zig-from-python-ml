@@ -1,10 +1,7 @@
 const std = @import("std");
 const exercise = @import("starter.zig");
 
-test "comptime_sum is correct" {
-    // Sum of 0..10 = 0+1+2+3+4+5+6+7+8+9+10 = 55
-    try std.testing.expectEqual(@as(i32, 55), exercise.comptime_sum);
-}
+// ── Part 1: max ──
 
 test "max with i32" {
     try std.testing.expectEqual(@as(i32, 42), exercise.max(i32, 10, 42));
@@ -15,16 +12,46 @@ test "max with f64" {
     try std.testing.expectApproxEqAbs(@as(f64, 3.14), exercise.max(f64, 3.14, 2.71), 0.01);
 }
 
-test "createArray size" {
-    const arr5 = exercise.createArray(5);
-    try std.testing.expectEqual(@as(usize, 5), arr5.len);
-
-    const arr10 = exercise.createArray(10);
-    try std.testing.expectEqual(@as(usize, 10), arr10.len);
+test "max with equal values" {
+    try std.testing.expectEqual(@as(i32, 7), exercise.max(i32, 7, 7));
 }
 
-test "createArray values" {
-    const arr = exercise.createArray(5);
-    try std.testing.expectEqual(@as(i32, 0), arr[0]);
-    try std.testing.expectEqual(@as(i32, 4), arr[4]);
+// ── Part 2: Pair ──
+
+test "Pair(i32) struct creation and field access" {
+    const IntPair = exercise.Pair(i32);
+    const p = IntPair{ .first = 1000, .second = -5 };
+    try std.testing.expectEqual(@as(i32, 1000), p.first);
+    try std.testing.expectEqual(@as(i32, -5), p.second);
+}
+
+test "Pair uses the type parameter" {
+    const FloatPair = exercise.Pair(f64);
+    const p = FloatPair{ .first = 3.14, .second = 2.71 };
+    try std.testing.expectApproxEqAbs(@as(f64, 3.14), p.first, 0.001);
+    try std.testing.expectApproxEqAbs(@as(f64, 2.71), p.second, 0.001);
+}
+
+// ── Part 3: isNumeric ──
+
+test "isNumeric true for integer types" {
+    try std.testing.expect(exercise.isNumeric(i32));
+    try std.testing.expect(exercise.isNumeric(u8));
+    try std.testing.expect(exercise.isNumeric(u64));
+}
+
+test "isNumeric true for float types" {
+    try std.testing.expect(exercise.isNumeric(f32));
+    try std.testing.expect(exercise.isNumeric(f64));
+}
+
+test "isNumeric false for non-numeric types" {
+    try std.testing.expect(!exercise.isNumeric(bool));
+    try std.testing.expect(!exercise.isNumeric([]const u8));
+}
+
+// ── Part 4: comptime_factorial ──
+
+test "comptime_factorial equals 10!" {
+    try std.testing.expectEqual(@as(u64, 3628800), exercise.comptime_factorial);
 }

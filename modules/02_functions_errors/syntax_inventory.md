@@ -142,6 +142,13 @@ The student can produce all syntax listed in `modules/01_foundations/syntax_inve
 - Returning types from functions
 - Comptime conditionals on type
 
+### Also needed for Exercise 2.6
+- `if (a > b) a else b` — conditional expression (from Module 1)
+- `switch (value) { .variant => ..., else => ... }` — switch with payload (from Lesson 2.5)
+- `blk: { ... break :blk result; }` — labeled blocks (from Module 1)
+- `for (1..11) |i| { }` — range-based for loop (from Module 1)
+- `@intCast(value)` — integer cast for loop variable (from Lesson 1.5)
+
 ---
 
 ## NOT YET TAUGHT (common gaps to watch for)
