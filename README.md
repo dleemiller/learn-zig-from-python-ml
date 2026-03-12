@@ -1,4 +1,4 @@
-# Learn Zig: An AI-Instructor-Led Course for Python/ML Developers
+# Learn Zig: An AI-Instructor-Led Course for Python/ML Developers (Work in progress)
 
 An interactive Zig course where an AI instructor (Claude Code) teaches you systems programming, progressing from basics to building an ML inference engine. Designed for Python developers — no prior C/C++/Rust experience required.
 
